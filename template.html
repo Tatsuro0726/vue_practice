@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js</title>
+  </head>
+  <body>
+    <!--ページ本体-->
+    <div id="app">
+      <p>{{ message }}</p>
+      <p v-pre>{{ message }}</p>
+      <a v-bind:href="url">WINGSプロジェクト</a>
+      <input type="checkbox" value="クリック" v-bind:checked="flag" />
+      <!-- <p>{{ email.split('@')[0].toUpperCase()}}</p> -->
+      <p>{{ localEmail }}</p>
+      <p>{{ localEmail2() }}</p>
+    </div>
+
+    <div id="app2">
+      <form>
+        <input type="button" value="クリック" v-on:click="onclick" />
+      </form>
+      <div>算出プロパティ:{{randomc}}</div>
+      <div>メソッド:{{randomm()}}</div>
+      <div>現在日時:{{current}}</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/template.js"></script>
+  </body>
+</html>
